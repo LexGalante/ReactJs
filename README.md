@@ -1,5 +1,6 @@
 # React JS
-Aplicação construida utilizando a lib [reactjs](https://pt-br.reactjs.org/)
+Aplicação construida utilizando a lib [reactjs](https://pt-br.reactjs.org/) <br/>
+Estutura padrão de um projeto com algumas funcionalidades
 
 ## Plugins Utilizados
 - [react-redux](https://redux.js.org)
