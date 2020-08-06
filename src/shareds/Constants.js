@@ -1,1 +1,0 @@
-export const ACTION_LOG = 'ACTION_LOG';

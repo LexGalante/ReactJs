@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Word</title>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+</head>
+
+<body>
+
+    <h1>Componente HTML puro</h1>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        // classe
+        // deve ter uma função chamada render que retorna um react element
+        // deve retornar apenas um componente
+        var Title = React.createClass({
+            render: function () {
+                return (
+                    <h1>Componente de Classe React</h1>
+                )
+            }
+        });
+        // elemento
+        var span = React.createElement('span', null, 'Componente React');
+        // elementos aninhados
+        var h1 = React.createElement('h1', null, [
+            span,
+            React.createElement('br', null),
+            React.createElement('strong', null, 'Componente React 2'),
+            <h1>Componente JSX</h1>,
+            <Title />,
+        ]);
+
+        console.log(h1);
+
+        var app = document.getElementById('app');
+        // função que renderiza os elementos react
+        // gerencia o virtual dom
+        ReactDOM.render(h1, app);
+
+    </script>
+
+
+</body>
+
+</html>
